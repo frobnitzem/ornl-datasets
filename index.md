@@ -1,9 +1,41 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: default
 ---
 
-The OLCF Datasets Site is a collaborative space for the HPC and Data Science communities to share datasets and methods for generation, analysis, and general computations.
+<div class="home">
+  <p>The ORNL Data Site is a collaborative space for the HPC and Data Science communities to share datasets and methods for generation, analysis, and general computations.</p>
 
+  {%- if site.datasets.size > 0 -%}
+    <h2 class="post-list-heading">{{ "Datasets" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.datasets -%}
+      <li> <!-- class="wrapper"> -->
+        {% include dataset.html post=post %}
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ "News" }}</h2>
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <p>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </p>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+  <br />
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+</div>

@@ -1,0 +1,44 @@
+hep:
+    title: "High Energy Physics"
+    # Note: be sure to ref. this as {{ category.icon | relative_url }}
+    icon: "/assets/images/hep.png"
+    description: |
+        High Energy Physics (HEP) explores what the world is made of
+        and how it works at the smallest and largest scales,
+        seeking new discoveries from the tiniest particles to the outer
+        reaches of space.
+np:
+    title: "Nuclear Physics"
+    icon: "/assets/images/np.png"
+    description: |
+        Improving our understanding of the building blocks of matter;
+        discovering the origins of nuclei; and identifying the forces
+        that transform matter.
+bes:
+    title: "Basic Energy Sciences"
+    icon: "/assets/images/bes.png"
+    description: |
+        Fundamental research to understand, predict, and
+        ultimately control matter and energy at the electronic,
+        atomic, and molecular levels.
+ber:
+    title: "Biological and Environmental Research"
+    icon: "/assets/images/ber.png"
+    description: |
+        Data on biological, biogeochemical, and physical processes
+        that span from molecular and genomics-controlled scales
+        to the regional and global scales that govern changes in
+        watershed dynamics, climate, and the earth system.
+ascr:
+    title: "Advanced Scientific Computing Research"
+    icon: "/assets/images/ascr.png"
+    description: |
+        Discovery, development, and deployment of computational
+        and networking capability to analyze, model, simulate
+        and predict complex phenomena.
+fes:
+    title: "Fusion Energy Sciences"
+    icon: "/assets/images/fes.png"
+    description: |
+        Confined plasma and fusion experiments as well as materials
+        and systems enabling control of plasmas.

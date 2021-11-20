@@ -1,0 +1,10 @@
+
+<img class="thumb" src="{{post.image}}" alt="{{ post.title | escape }}">
+<p>
+    <a class="post-link" href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+    </a>
+</p>
+{%- if site.show_excerpts -%}
+    {{ post.excerpt }}
+{%- endif -%}

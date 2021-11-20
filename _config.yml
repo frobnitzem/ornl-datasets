@@ -5,6 +5,7 @@ description: "A collaborative space for the HPC and Data Science communities."
 baseurl: "/ornl-datasets"
 url: "https://frobnitzem.github.io/ornl-datasets"
 repo_url: "https://github.com/frobnitzem/ornl-datasets"
+show_excerpts: true
 
 github_username: ornl
 
@@ -22,7 +23,7 @@ collections:
     permalink: "/news/:year/:month/:day/:title/"
   datasets:
     output: true
-    permalink: "/:collection/:name"
+    permalink: "/:collection/:categories/:name"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

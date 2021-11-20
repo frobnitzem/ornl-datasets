@@ -1,0 +1,27 @@
+---
+layout: default
+permalink: /categories/
+title: Categories
+---
+
+
+<div id="archives">
+{% for c in site.data.categories %}
+  <div class="archive-group">
+    <div id="#{{ c[0] }}"></div>
+    <br />
+    <h3 class="category-head">{{ c[1].title }}</h3>
+    <p>{{c[1].description}}</p>
+    <a name="{{ c[0] }}"></a>
+    {% for post in site.datasets %}
+      <ul class="post-list">
+        {%- if post.categories contains c[0] -%}
+          <li>
+            {% include dataset.html post=post %}
+          </li>
+        {%- endif -%}
+      </ul>
+    {% endfor %}
+  </div>
+{% endfor %}
+</div>
